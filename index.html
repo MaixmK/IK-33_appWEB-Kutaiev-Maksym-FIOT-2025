@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Конфігуратор ПК</title>
+</head>
+<body>
+  <header>
+    <h1>Конфігуратор ПК</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Головна</a></li>
+        <li><a href="about.html">Про проєкт</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Пошук комплектуючих</h2>
+    <form action="#" method="get">
+      <input type="text" name="search" placeholder="Я шукаю...">
+      <button type="submit">Знайти</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Компоненти збірки</h2>
+    <ul>
+      <li><img src="img/cpu.svg" alt="Процесор" width="63" height="63"> Процесор</li>
+      <li><img src="img/Motherboard.svg" alt="Материнська плата" width="63" height="63"> Материнська плата</li>
+      <li><img src="img/RAM.svg" alt="Оперативна пам'ять" width="63" height="63"> Оперативна пам'ять</li>
+      <li><img src="img/gpu.svg" alt="Відеокарта" width="63" height="63"> Відеокарта</li>
+      <li><img src="img/harddrive.svg" alt="Накопичувач" width="63" height="63"> Накопичувач</li>
+      <li><img src="img/comp.svg" alt="Корпус" width="63" height="63"> Корпус</li>
+      <li><img src="img/power-supply.png" alt="Блок живлення" width="63" height="63"> Блок живлення</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Таблиця сумісності</h2>
+    <table border="1">
+      <tr>
+        <th>Компонент</th>
+        <th>Сумісність</th>
+      </tr>
+      <tr>
+        <td>Процесор Intel i5</td>
+        <td>Сумісний з Socket 1200</td>
+      </tr>
+      <tr>
+        <td>Відеокарта RTX 4060</td>
+        <td>Потрібен блок живлення 600W+</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Оформлення замовлення</h2>
+    <form action="#" method="post">
+      <label>Ім’я: <input type="text" name="name" required></label><br>
+      <label>Телефон: <input type="tel" name="phone" required></label><br>
+      <label>Адреса: <input type="text" name="address"></label><br>
+      <label>Спосіб доставки: 
+        <select name="delivery">
+          <option>Нова Пошта</option>
+          <option>Укрпошта</option>
+          <option>Кур’єр</option>
+        </select>
+      </label><br>
+      <button type="submit">Підтвердити замовлення</button>
+    </form>
+  </section>
+
+  <section>
+    <h2>Популярні збірки</h2>
+    <ol>
+      <li>Ігрова збірка (RTX 4060, Ryzen 5, 16GB RAM)</li>
+      <li>Офісний ПК (Intel i3, 8GB RAM, SSD 512GB)</li>
+      <li>Універсальний ПК (Ryzen 7, 32GB RAM, RTX 4070)</li>
+    </ol>
+  </section>
+</body>
+</html>
