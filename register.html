@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Реєстрація</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth--register">
+  <main class="auth">
+    <div class="auth__wrap">
+      <h1 class="auth__title">Реєстрація</h1>
+
+      <section class="auth-card" aria-labelledby="reg-form-title">
+        <h2 id="reg-form-title" class="visually-hidden">Форма реєстрації</h2>
+
+        <form class="stack" action="#" method="post" novalidate>
+          <label class="visually-hidden" for="first">Ім’я</label>
+          <input id="first" class="input" type="text" name="first_name" placeholder="Введіть своє ім’я" autocomplete="given-name" required>
+
+          <label class="visually-hidden" for="last">Прізвище</label>
+          <input id="last" class="input" type="text" name="last_name" placeholder="Введіть своє прізвище" autocomplete="family-name" required>
+
+          <label class="visually-hidden" for="email">E-mail</label>
+          <input id="email" class="input" type="email" name="email" placeholder="Введіть свій e-mail" autocomplete="email" required>
+
+          <label class="visually-hidden" for="pass">Пароль</label>
+          <input id="pass" class="input" type="password" name="password" placeholder="Введіть свій пароль" autocomplete="new-password" minlength="6" required>
+
+          <button class="btn btn--primary auth__submit" type="submit">Зареєструватися</button>
+        </form>
+      </section>
+
+      <p class="auth__meta">Вже маєте акаунт? <a href="login.html">Увійти</a></p>
+    </div>
+  </main>
+
+  <script>
+    // Приклад простої перевірки (необов’язково)
+    document.querySelector('form')?.addEventListener('submit', e=>{
+      const form = e.currentTarget;
+      if(!form.checkValidity()){
+        e.preventDefault();
+        form.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>

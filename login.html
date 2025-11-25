@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Вхід</title>
+  <link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="auth--login">
+  <main class="auth">
+    <div class="auth__wrap">
+      <h1 class="auth__title">Вхід</h1>
+
+      <section class="auth-card" aria-labelledby="login-form-title">
+        <h2 id="login-form-title" class="visually-hidden">Форма входу</h2>
+
+        <form class="stack" action="#" method="post" novalidate>
+          <label class="visually-hidden" for="lemail">E-mail</label>
+          <input id="lemail" class="input" type="email" name="email" placeholder="Введіть свій e-mail" autocomplete="email" required>
+
+          <label class="visually-hidden" for="lpass">Пароль</label>
+          <input id="lpass" class="input" type="password" name="password" placeholder="Введіть свій пароль" autocomplete="current-password" minlength="6" required>
+
+          <button class="btn btn--primary auth__submit" type="submit">Увійти</button>
+        </form>
+      </section>
+
+    <p class="auth__meta">Немає акаунта? <a href="register.html">Зареєструватися</a></p>
+    <p class="auth__meta">Повернутись на головну <a href="index.html">На головну</a></p>
+    </div>
+  </main>
+
+  <script>
+    document.querySelector('form')?.addEventListener('submit', e=>{
+      const form = e.currentTarget;
+      if(!form.checkValidity()){
+        e.preventDefault();
+        form.reportValidity();
+      }
+    });
+  </script>
+</body>
+</html>

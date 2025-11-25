@@ -1,100 +1,157 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Конфігуратор ПК</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Комплектуючі для ПК — головна</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Конфігуратор ПК</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html" aria-current="page">Головна</a></li>
-        <li><a href="about.html">Про проєкт</a></li>
-      </ul>
-    </nav>
+  <header class="site-header">
+    <div class="topbar container">
+      <a class="logo" href="#">Комплектуючі</a>
+      </form>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li><a href="#shop" class="nav__link">Каталог</a></li>
+          <li><a href="#about" class="nav__link">Про нас</a></li>
+          <li><a href="#contacts" class="nav__link">Контакти</a></li>
+        </ul>
+      </nav>
+      <div class="actions">
+        <a class="icon-btn" href="login.html" title="Профіль">👤</a>
+        <a class="icon-btn" href="#" title="Кошик">🛒</a><span id="cartCount">0</span>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section aria-labelledby="search-heading">
-      <h2>Пошук комплектуючих</h2>
-      <form action="#" method="get">
-        <label for="search">Введіть назву:</label>
-        <input id="search" type="text" name="search" placeholder="Я шукаю...">
-        <button type="submit">Знайти</button>
-      </form>
+    <section class="hero container">
+      <h1 class="hero__title">Збери свій ідеальний ПК</h1>
+      <p class="hero__lead">Оберіть комплектуючі, що підходять саме вам.</p>
     </section>
 
-    <section aria-labelledby="components-heading">
-      <h2>Компоненти збірки</h2>
-      <ul>
-        <li><img src="img/cpu.svg" alt="Процесор" width="63" height="63"> Процесор</li>
-        <li><img src="img/Motherboard.svg" alt="Материнська плата" width="63" height="63"> Материнська плата</li>
-        <li><img src="img/RAM.svg" alt="Оперативна пам'ять" width="63" height="63"> Оперативна пам'ять</li>
-        <li><img src="img/gpu.svg" alt="Відеокарта" width="63" height="63"> Відеокарта</li>
-        <li><img src="img/harddrive.svg" alt="Накопичувач" width="63" height="63"> Накопичувач</li>
-        <li><img src="img/comp.svg" alt="Корпус" width="63" height="63"> Корпус</li>
-        <li><img src="img/power-supply.png" alt="Блок живлення" width="63" height="63"> Блок живлення</li>
+    <section class="home-section container">
+      <header>
+        <h2 class="section-title">Популярні категорії</h2>
+      </header>
+      <ul class="catalog">
+        <li class="card"><a href="?category=cpu#shop" class="card__link"><img src="assets/icons/cpu.svg" class="card__icon"><div class="card__title">Процесори</div></a></li>
+        <li class="card"><a href="?category=mb#shop" class="card__link"><img src="assets/icons/motherboard.svg" class="card__icon"><div class="card__title">Материнські плати</div></a></li>
+        <li class="card"><a href="?category=ram#shop" class="card__link"><img src="assets/icons/ram.svg" class="card__icon"><div class="card__title">Оперативна пам’ять</div></a></li>
+        <li class="card"><a href="?category=gpu#shop" class="card__link"><img src="assets/icons/gpu.svg" class="card__icon"><div class="card__title">Відеокарти</div></a></li>
+        <li class="card"><a href="?category=storage#shop" class="card__link"><img src="assets/icons/harddrive.svg" class="card__icon"><div class="card__title">Накопичувачі</div></a></li>
+        <li class="card"><a href="?category=case#shop" class="card__link"><img src="assets/icons/comp.svg" class="card__icon"><div class="card__title">Корпуси</div></a></li>
+        <li class="card"><a href="?category=psu#shop" class="card__link"><img src="assets/icons/power-supply.png" class="card__icon"><div class="card__title">Блоки живлення</div></a></li>
+        <li class="card"><a href="?category=cooling#shop" class="card__link"><img src="assets/icons/snow.png" class="card__icon"><div class="card__title">Охолодження</div></a></li>
       </ul>
     </section>
 
-    <section aria-labelledby="table-heading">
-      <h2>Таблиця сумісності</h2>
-      <table border="1">
-        <caption>Перевірка сумісності компонентів</caption>
-          <tr>
-            <th>Компонент</th>
-            <th>Сумісність</th>
-          </tr>
-          <tr>
-            <td>Процесор Intel i5</td>
-            <td>Сумісний з Socket 1200</td>
-          </tr>
-          <tr>
-            <td>Відеокарта RTX 4060</td>
-            <td>Потрібен блок живлення 600W+</td>
-          </tr>
-      </table>
+    <section id="about" class="home-section container">
+      <h2>Чому варто обирати нас</h2>
+      <ul>
+        <li>Перевірена сумісність комплектуючих.</li>
+        <li>Швидка доставка по Україні.</li>
+        <li>Технічна підтримка 24/7.</li>
+      </ul>
     </section>
 
-    <section aria-labelledby="order-heading">
-      <h2>Оформлення замовлення</h2>
-      <form action="#" method="post">
-          <label for="name">Ім’я:</label>
-          <input id="name" type="text" name="name" required><br>
+  <section class="component-table-section">
+  <h2 class="section-title">Most popular products</h2>
 
-          <label for="phone">Телефон:</label>
-          <input id="phone" type="tel" name="phone" required><br>
-
-          <label for="address">Адреса:</label>
-          <input id="address" type="text" name="address"><br>
-
-
-          <label for="delivery">Спосіб доставки:</label>
-          <select id="delivery" name="delivery">
-            <option value="nova-poshta">Нова Пошта</option>
-            <option value="ukrposhta">Укрпошта</option>
-            <option value="courier">Кур’єр</option>
-          </select>
-
-
-        <button type="submit">Підтвердити замовлення</button>
-      </form>
-    </section>
-
-    <section aria-labelledby="popular-heading">
-      <h2>Популярні збірки</h2>
-      <ol>
-        <li>Ігрова збірка (RTX 4060, Ryzen 5, 16GB RAM)</li>
-        <li>Офісний ПК (Intel i3, 8GB RAM, SSD 512GB)</li>
-        <li>Універсальний ПК (Ryzen 7, 32GB RAM, RTX 4070)</li>
-      </ol>
-    </section>
+  <table class="component-table">
+    <thead>
+      <tr>
+        <th>Product</th>
+        <th>Category</th>
+        <th>Rating</th>
+        <th>Monthly orders</th>
+        <th>Short description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>AMD Ryzen 5 5600</td>
+        <td>CPU</td>
+        <td>⭐ 4.8 / 5</td>
+        <td>120+</td>
+        <td>Best budget 6-core CPU for gaming and everyday use.</td>
+      </tr>
+      <tr>
+        <td>Intel Core i5-12400F</td>
+        <td>CPU</td>
+        <td>⭐ 4.7 / 5</td>
+        <td>95+</td>
+        <td>Great performance in modern games and productivity tasks.</td>
+      </tr>
+      <tr>
+        <td>NVIDIA GeForce RTX 4060</td>
+        <td>GPU</td>
+        <td>⭐ 4.6 / 5</td>
+        <td>80+</td>
+        <td>Entry-level ray tracing and DLSS support for 1080p gaming.</td>
+      </tr>
+      <tr>
+        <td>NVIDIA GeForce RTX 4070</td>
+        <td>GPU</td>
+        <td>⭐ 4.9 / 5</td>
+        <td>60+</td>
+        <td>High-end choice for 1440p gaming with excellent efficiency.</td>
+      </tr>
+      <tr>
+        <td>16 GB DDR4 3200 MHz</td>
+        <td>RAM</td>
+        <td>⭐ 4.8 / 5</td>
+        <td>150+</td>
+        <td>Optimal RAM capacity for gaming and multitasking in 2025.</td>
+      </tr>
+      <tr>
+        <td>1 TB NVMe SSD</td>
+        <td>Storage</td>
+        <td>⭐ 4.9 / 5</td>
+        <td>140+</td>
+        <td>Fast system boot, quick game loading and comfortable work.</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Конфігуратор ПК. Всі права захищені.</p>
+  <footer class="site-footer">
+    <div class="container footer__grid">
+      <small>© 2025 Комплектуючі для ПК</small>
+      <ul class="footer__links">
+        <li><a href="#">Політика конфіденційності</a></li>
+        <li><a href="#">Умови користування</a></li>
+      </ul>
+    </div>
   </footer>
+
+  <script>
+  const map = {
+    cpu:'cpu.html', mb:'mb.html', ram:'ram.html', gpu:'gpu.html',
+    storage:'storage.html', case:'case.html', psu:'psu.html', cooling:'cooling.html'
+  };
+  document.querySelectorAll('.catalog .card__link').forEach(a=>{
+    a.addEventListener('click', (e)=>{
+      const href = a.getAttribute('href')||'';
+      let cat = null; try { cat = new URL(href, location.href).searchParams.get('category'); } catch(e){}
+      if (cat && map[cat]) { e.preventDefault(); location.href = map[cat]; }
+    });
+  });
+
+  (function(){
+    const KEY = 'pc_cart';
+    function count(){
+      try {
+        const c = JSON.parse(localStorage.getItem(KEY)) || {items:[]};
+        return c.items.reduce((s,i)=>s+i.qty,0);
+      } catch(e){ return 0; }
+    }
+    function update(){ var el = document.getElementById('cartCount'); if(el) el.textContent = String(count()); }
+    window.addEventListener('storage', update);   // якщо кошик змінили з іншої вкладки/сторінки
+    document.addEventListener('DOMContentLoaded', update);
+  })();
+</script>
 </body>
 </html>

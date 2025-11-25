@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Каталог — Накопичувачі</title>
+  <link rel="stylesheet" href="catalog.css" />
+</head>
+<body>
+  <header>
+    <div class="container row">
+      <div class="brand"><a href="index.html">Комплектуючі</a> <span>·</span> <span>Накопичувачі</span></div>
+      <div class="grow"></div>
+      <a class="btn ghost" href="index.html">На головну</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1 id="title" style="margin: 6px 0 4px">Накопичувачі</h1>
+    <div class="crumbs">
+      <a href="index.html">Головна</a>
+      <span>→</span>
+      <a href="#" class="muted">Каталог</a>
+      <span id="crumb"></span>
+    </div>
+
+    <div class="toolbar">
+      <div class="search">
+        <svg class="ico" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input id="q" type="search" placeholder="Пошук: назва, характеристика…" autocomplete="off" />
+      </div>
+      <div>
+        <select id="sort">
+          <option value="pop">Сортування: популярні</option>
+          <option value="price_asc">Ціна: зростання</option>
+          <option value="price_desc">Ціна: спадання</option>
+          <option value="rating_desc">Рейтинг: високий → низький</option>
+        </select>
+      </div>
+      <div></div>
+    </div>
+
+    <div id="grid" class="grid" aria-live="polite"></div>
+
+    <dialog id="modal">
+      <div class="pad modal-grid">
+        <div>
+          <div class="thumb" style="border-radius:12px; overflow:hidden; border:1px solid var(--border)">
+            <img id="m-img" alt=""/>
+          </div>
+        </div>
+        <div>
+          <div class="badge" id="m-category"></div>
+          <h2 id="m-title" style="margin:10px 0 6px"></h2>
+          <div class="muted" id="m-sku"></div>
+          <p id="m-desc" style="margin:10px 0 12px"></p>
+          <div class="specs" id="m-specs"></div>
+          <div class="row-between" style="margin-top:12px">
+            <div class="price" id="m-price"></div>
+            <div>
+              <button class="btn ghost" id="btn-close">Закрити</button>
+              <a class="btn" id="btn-buy" target="_blank">Купити</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </dialog>
+
+    <footer class="container" style="padding-bottom:28px">
+      <p class="muted">© <span id="year"></span> Комплектуючі — Накопичувачі</p>
+    </footer>
+  </main>
+
+  <script src="products.js"></script>
+  <script src="catalog.js"></script>
+  <script>
+    window.FIXED_CATEGORY = "storage";
+    window.CATALOG_TITLE = "Накопичувачі";
+    document.addEventListener('DOMContentLoaded', ()=>{
+      document.getElementById('year').textContent = new Date().getFullYear();
+      window.initCatalog();
+    });
+  </script>
+</body>
+</html>
