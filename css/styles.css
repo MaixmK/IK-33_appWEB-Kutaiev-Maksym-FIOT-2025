@@ -206,3 +206,40 @@ body {
   .card { flex-basis: 100%; }
   .card__icon { width: 64px; height: 64px; }
 }
+
+@media (orientation: landscape) and (max-width: 768px) {
+  .hero {
+    padding: 1.2rem 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  animation: fadeUp .4s ease-out;
+}
+
+.catalog .card {
+  animation: fadeUp .4s ease-out;
+}
+
+.burger[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(5px) rotate(45deg);
+}
+
+.burger[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-5px) rotate(-45deg);
+}

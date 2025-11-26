@@ -7,23 +7,30 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="topbar container">
-      <a class="logo" href="#">Комплектуючі</a>
-      </form>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li><a href="#shop" class="nav__link">Каталог</a></li>
-          <li><a href="#about" class="nav__link">Про нас</a></li>
-          <li><a href="#contacts" class="nav__link">Контакти</a></li>
-        </ul>
-      </nav>
-      <div class="actions">
-        <a class="icon-btn" href="login.html" title="Профіль">👤</a>
-        <a class="icon-btn" href="#" title="Кошик">🛒</a><span id="cartCount">0</span>
-      </div>
+<header class="site-header">
+  <div class="topbar container">
+    <a class="logo" href="#">Комплектуючі</a>
+
+    <nav id="nav" class="nav">
+      <ul class="nav__list">
+        <li><a href="#shop" class="nav__link">Каталог</a></li>
+        <li><a href="#about" class="nav__link">Про нас</a></li>
+        <li><a href="#contacts" class="nav__link">Контакти</a></li>
+      </ul>
+    </nav>
+
+    <div class="actions">
+      <a class="icon-btn" href="authorization/login.html" title="Профіль">👤</a>
+      <a class="icon-btn" href="#" title="Кошик">🛒</a><span id="cartCount">0</span>
     </div>
-  </header>
+
+    <button class="burger" aria-label="Меню" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
 
   <main>
     <section class="hero container">
@@ -36,14 +43,14 @@
         <h2 class="section-title">Популярні категорії</h2>
       </header>
       <ul class="catalog">
-        <li class="card"><a href="?category=cpu#shop" class="card__link"><img src="assets/icons/cpu.svg" class="card__icon"><div class="card__title">Процесори</div></a></li>
-        <li class="card"><a href="?category=mb#shop" class="card__link"><img src="assets/icons/motherboard.svg" class="card__icon"><div class="card__title">Материнські плати</div></a></li>
-        <li class="card"><a href="?category=ram#shop" class="card__link"><img src="assets/icons/ram.svg" class="card__icon"><div class="card__title">Оперативна пам’ять</div></a></li>
-        <li class="card"><a href="?category=gpu#shop" class="card__link"><img src="assets/icons/gpu.svg" class="card__icon"><div class="card__title">Відеокарти</div></a></li>
-        <li class="card"><a href="?category=storage#shop" class="card__link"><img src="assets/icons/harddrive.svg" class="card__icon"><div class="card__title">Накопичувачі</div></a></li>
-        <li class="card"><a href="?category=case#shop" class="card__link"><img src="assets/icons/comp.svg" class="card__icon"><div class="card__title">Корпуси</div></a></li>
-        <li class="card"><a href="?category=psu#shop" class="card__link"><img src="assets/icons/power-supply.png" class="card__icon"><div class="card__title">Блоки живлення</div></a></li>
-        <li class="card"><a href="?category=cooling#shop" class="card__link"><img src="assets/icons/snow.png" class="card__icon"><div class="card__title">Охолодження</div></a></li>
+        <li class="card"><a href="catalog/cpu.html" class="card__link"><img src="assets/icons/cpu.svg" class="card__icon"><div class="card__title">Процесори</div></a></li>
+        <li class="card"><a href="catalog/mb.html" class="card__link"><img src="assets/icons/motherboard.svg" class="card__icon"><div class="card__title">Материнські плати</div></a></li>
+        <li class="card"><a href="catalog/ram.html" class="card__link"><img src="assets/icons/ram.svg" class="card__icon"><div class="card__title">Оперативна пам’ять</div></a></li>
+        <li class="card"><a href="catalog/gpu.html" class="card__link"><img src="assets/icons/gpu.svg" class="card__icon"><div class="card__title">Відеокарти</div></a></li>
+        <li class="card"><a href="catalog/storage.html" class="card__link"><img src="assets/icons/harddrive.svg" class="card__icon"><div class="card__title">Накопичувачі</div></a></li>
+        <li class="card"><a href="catalog/case.html" class="card__link"><img src="assets/icons/comp.svg" class="card__icon"><div class="card__title">Корпуси</div></a></li>
+        <li class="card"><a href="catalog/psu.html" class="card__link"><img src="assets/icons/power-supply.png" class="card__icon"><div class="card__title">Блоки живлення</div></a></li>
+        <li class="card"><a href="catalog/storage.html" class="card__link"><img src="assets/icons/snow.png" class="card__icon"><div class="card__title">Охолодження</div></a></li>
       </ul>
     </section>
 
@@ -126,32 +133,6 @@
       </ul>
     </div>
   </footer>
-
-  <script>
-  const map = {
-    cpu:'cpu.html', mb:'mb.html', ram:'ram.html', gpu:'gpu.html',
-    storage:'storage.html', case:'case.html', psu:'psu.html', cooling:'cooling.html'
-  };
-  document.querySelectorAll('.catalog .card__link').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const href = a.getAttribute('href')||'';
-      let cat = null; try { cat = new URL(href, location.href).searchParams.get('category'); } catch(e){}
-      if (cat && map[cat]) { e.preventDefault(); location.href = map[cat]; }
-    });
-  });
-
-  (function(){
-    const KEY = 'pc_cart';
-    function count(){
-      try {
-        const c = JSON.parse(localStorage.getItem(KEY)) || {items:[]};
-        return c.items.reduce((s,i)=>s+i.qty,0);
-      } catch(e){ return 0; }
-    }
-    function update(){ var el = document.getElementById('cartCount'); if(el) el.textContent = String(count()); }
-    window.addEventListener('storage', update);   // якщо кошик змінили з іншої вкладки/сторінки
-    document.addEventListener('DOMContentLoaded', update);
-  })();
-</script>
+<script src="js/app.js"></script>
 </body>
 </html>

@@ -108,7 +108,7 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
             </div>
             <div class="row" style="gap:8px">
               <button class="btn ghost" data-id="${p.id}" data-action="details" aria-label="Детальніше про ${p.title}">Детальніше</button>
-              <button class="btn" data-id="${p.id}" data-action="add" aria-label="Додати ${p.title} до кошика">До кошика</button>
+              <button class="btn" data-id="${p.id}" data-action="add" aria-label="Додати ${p.title} до кошика">🛒</button>
             </div>
           </div>
         </div>`;
@@ -169,7 +169,7 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
     $('#btn-close').addEventListener('click', ()=> $('#modal').close());
     $('#modal').addEventListener('click', (e)=>{ if(e.target.tagName==='DIALOG') e.target.close(); });
 
-    updateCartCount(); // reflect saved cart count on load
+    updateCartCount();
     render();
   }
 

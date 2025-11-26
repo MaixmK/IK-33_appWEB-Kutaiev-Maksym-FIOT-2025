@@ -9,11 +9,12 @@ window.PRODUCTS = [
     price: 5999,
     rating: 4.8,
     sku: "100-100000065BOX",
-    img: "",
+    img: "../assets/cpu/AMD Ryzen 5 5600X.jpg",
     desc: "6 ядер / 12 потоків • 3.7–4.6 ГГц • для ігор і роботи.",
     specs: { "Сокет": "AM4", "TDP": "65W", "Кеш L3": "32MB", "Техпроцес": "7nm" },
     buy: "#"
   },
+
   {
     id: "cpu-5600",
     title: "AMD Ryzen 5 5600",
@@ -21,7 +22,7 @@ window.PRODUCTS = [
     price: 4999,
     rating: 4.7,
     sku: "100-100000927BOX",
-    img: "https://picsum.photos/seed/cpu5600/800/600",
+    img: "../assets/cpu/AMD Ryzen 5 5600.jpg",
     desc: "6C/12T, 3.5–4.4 ГГц • оптимум для бюджетного геймінгу.",
     specs: { "Сокет": "AM4", "TDP": "65W", "Кеш L3": "32MB" },
     buy: "#"
@@ -33,7 +34,7 @@ window.PRODUCTS = [
     price: 7999,
     rating: 4.7,
     sku: "100-100000926WOF",
-    img: "https://picsum.photos/seed/cpu5700x/800/600",
+    img: "../assets/cpu/AMD Ryzen 7 5700X.webp",
     desc: "8C/16T, 3.4–4.6 ГГц • універсальний восьмиядерник.",
     specs: { "Сокет": "AM4", "TDP": "65W", "Кеш L3": "32MB" },
     buy: "#"
@@ -45,7 +46,7 @@ window.PRODUCTS = [
     price: 11999,
     rating: 4.9,
     sku: "100-100000651WOF",
-    img: "https://picsum.photos/seed/cpu5800x3d/800/600",
+    img: "../assets/cpu/AMD Ryzen 7 5800X3D.jpeg",
     desc: "3D V-Cache • топ для ігор на платформі AM4.",
     specs: { "Сокет": "AM4", "TDP": "105W", "Кеш L3": "96MB" },
     buy: "#"
@@ -57,7 +58,7 @@ window.PRODUCTS = [
     price: 7799,
     rating: 4.6,
     sku: "100-100001015BOX",
-    img: "https://picsum.photos/seed/cpu7600/800/600",
+    img: "../assets/cpu/ryzen_5_7600.png",
     desc: "6C/12T, Zen 4 • висока продуктивність у 1080p/1440p.",
     specs: { "Сокет": "AM5", "TDP": "65W", "Памʼять": "DDR5" },
     buy: "#"
@@ -69,7 +70,7 @@ window.PRODUCTS = [
     price: 11499,
     rating: 4.7,
     sku: "100-100001590BOX",
-    img: "https://picsum.photos/seed/cpu7700/800/600",
+    img: "../assets/cpu/AMD Ryzen 7 7700.jpg",
     desc: "8C/16T, Zen 4 • для стрімінгу й важких задач.",
     specs: { "Сокет": "AM5", "TDP": "65W", "Памʼять": "DDR5" },
     buy: "#"
@@ -81,7 +82,7 @@ window.PRODUCTS = [
     price: 5650,
     rating: 4.8,
     sku: "BX8071512400F",
-    img: "https://picsum.photos/seed/cpu12400f/800/600",
+    img: "../assets/cpu/Intel Core i5-12400F.jpg",
     desc: "6P/12T • відмінний баланс ціни та FPS.",
     specs: { "Сокет": "LGA1700", "TDP": "65W", "Памʼять": "DDR4/DDR5" },
     buy: "#"
@@ -93,7 +94,7 @@ window.PRODUCTS = [
     price: 7999,
     rating: 4.7,
     sku: "BX8071513400F",
-    img: "https://picsum.photos/seed/cpu13400f/800/600",
+    img: "../assets/cpu/Intel Core i5-13400F.png",
     desc: "10 ядер (6P+4E), 16 потоків • універсальний середній клас.",
     specs: { "Сокет": "LGA1700", "TDP": "65W", "Памʼять": "DDR4/DDR5" },
     buy: "#"
@@ -105,7 +106,7 @@ window.PRODUCTS = [
     price: 7799,
     rating: 4.6,
     sku: "BX8071512600KF",
-    img: "https://picsum.photos/seed/cpu12600kf/800/600",
+    img: "../assets/cpu/Intel Core i5-12600KF.jpg",
     desc: "P+E архітектура • високі частоти, без iGPU.",
     specs: { "Сокет": "LGA1700", "TDP": "125W", "Памʼять": "DDR4/DDR5" },
     buy: "#"
@@ -117,7 +118,7 @@ window.PRODUCTS = [
     price: 13999,
     rating: 4.7,
     sku: "BX8071513700F",
-    img: "https://picsum.photos/seed/cpu13700f/800/600",
+    img: "../assets/cpu/Intel Core i7-13700F.webp",
     desc: "16 ядер (8P+8E), 24 потоки • для важких задач і ігор.",
     specs: { "Сокет": "LGA1700", "TDP": "65W", "Памʼять": "DDR4/DDR5" },
     buy: "#"
@@ -133,7 +134,7 @@ window.PRODUCTS = [
     price: 14999,
     rating: 4.6,
     sku: "RTX4060-8G",
-    img: "https://picsum.photos/seed/gpu4060a/800/600",
+    img: "https://b.428.ua/img/3855673/3000/2000/videokarta_msi_pci-e_geforce_rtx_4060_8gb_ddr6_rtx_4060_ventus_2x_black_8g_oc~710~675.jpg",
     desc: "Ada Lovelace • DLSS 3 • ідеально для 1080p high/ultra.",
     specs: { "Памʼять": "8GB GDDR6", "TBP": "≈115W", "Виходи": "HDMI 2.1, DP 1.4a" },
     buy: "#"
@@ -145,7 +146,7 @@ window.PRODUCTS = [
     price: 21999,
     rating: 4.5,
     sku: "RTX4060Ti-8G",
-    img: "https://picsum.photos/seed/gpu4060ti/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuCBaGxZ-eVoFCDQCdOaSYq7dju7PpLPmdUw&s",
     desc: "Більше ядер і кешу, DLSS 3 • 1080p/1440p.",
     specs: { "Памʼять": "8GB GDDR6", "TBP": "≈160W" },
     buy: "#"
@@ -157,7 +158,7 @@ window.PRODUCTS = [
     price: 28999,
     rating: 4.7,
     sku: "RTX4070-12G",
-    img: "https://picsum.photos/seed/gpu4070/800/600",
+    img: "https://asset.msi.com/resize/image/global/product/product_1691999953463ab653725dafce938fbdffd8236bb1.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     desc: "1440p ультра з DLSS 3 • енергоефективна.",
     specs: { "Памʼять": "12GB GDDR6X", "TBP": "≈200W" },
     buy: "#"
@@ -169,7 +170,7 @@ window.PRODUCTS = [
     price: 8999,
     rating: 4.6,
     sku: "RX6600-8G",
-    img: "https://picsum.photos/seed/gpu6600/800/600",
+    img: "https://api.e-server.com.ua/storage/277536/rs/U0554283_big___rs_1200_1200.jpg",
     desc: "Краще співвідношення ціна/FPS для 1080p.",
     specs: { "Памʼять": "8GB GDDR6", "TBP": "≈132W" },
     buy: "#"
@@ -181,7 +182,7 @@ window.PRODUCTS = [
     price: 14999,
     rating: 4.6,
     sku: "RX6700XT-12G",
-    img: "https://picsum.photos/seed/gpu6700xt/800/600",
+    img: "https://api.e-server.com.ua/storage/277650/rs/U0496353_big___rs_1200_1200.jpg",
     desc: "Сильна карта для 1440p без трасування.",
     specs: { "Памʼять": "12GB GDDR6", "TBP": "≈230W" },
     buy: "#"
@@ -193,7 +194,7 @@ window.PRODUCTS = [
     price: 28999,
     rating: 4.7,
     sku: "RX7800XT-16G",
-    img: "https://picsum.photos/seed/gpu7800xt/800/600",
+    img: "https://img.telemart.ua/546079-695054-product_popup/gigabyte-radeon-rx-7800-xt-gaming-oc-16384mb-gv-r78xtgaming-oc-16gd.jpg",
     desc: "RDNA 3 • 1440p ультра, 16GB, вигідна ціна.",
     specs: { "Памʼять": "16GB GDDR6", "TBP": "≈263W" },
     buy: "#"
@@ -205,7 +206,7 @@ window.PRODUCTS = [
     price: 8999,
     rating: 4.3,
     sku: "RTX3050-8G",
-    img: "https://picsum.photos/seed/gpu3050/800/600",
+    img: "https://content.rozetka.com.ua/goods/images/big/372700025.jpg",
     desc: "Вхід до RTX/ DLSS у бюджетному сегменті.",
     specs: { "Памʼять": "8GB GDDR6", "TBP": "≈130W" },
     buy: "#"
@@ -217,7 +218,7 @@ window.PRODUCTS = [
     price: 31999,
     rating: 4.7,
     sku: "RTX4070S-12G",
-    img: "https://picsum.photos/seed/gpu4070s/800/600",
+    img: "https://asset.msi.com/resize/image/global/product/product_1704703822984da48f4e57873dd8ba9f899f1df6ac.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     desc: "Покращені ядра/частоти • 1440p/4K з DLSS.",
     specs: { "Памʼять": "12GB GDDR6X", "TBP": "≈220W" },
     buy: "#"
@@ -229,7 +230,7 @@ window.PRODUCTS = [
     price: 39999,
     rating: 4.6,
     sku: "RX7900XT-20G",
-    img: "https://picsum.photos/seed/gpu7900xt/800/600",
+    img: "https://wintik.com.ua/image/cache/catalog/YML-DC/a61/IMGa61905645f7e37a4c9bd55a6d937d899-1000x1000.jpg",
     desc: "Флагман RDNA 3 для 4K без компромісів.",
     specs: { "Памʼять": "20GB GDDR6", "TBP": "≈315W" },
     buy: "#"
@@ -241,7 +242,7 @@ window.PRODUCTS = [
     price: 49999,
     rating: 4.8,
     sku: "RTX4080S-16G",
-    img: "https://picsum.photos/seed/gpu4080s/800/600",
+    img: "https://asset.msi.com/resize/image/global/product/product_1704700391c0ff70dde2655cc06ad6ccc5737c84bf.png62405b38c58fe0f07fcef2367d8a9ba1/600.png",
     desc: "Преміум 4K + рейтрейсинг • DLSS 3.5.",
     specs: { "Памʼять": "16GB GDDR6X", "TBP": "≈320W" },
     buy: "#"
@@ -257,7 +258,7 @@ window.PRODUCTS = [
     price: 1399,
     rating: 4.7,
     sku: "DDR4-16-3200",
-    img: "https://picsum.photos/seed/ram1/800/600",
+    img: "https://content2.rozetka.com.ua/goods/images/big/442941455.jpg",
     desc: "Надійний набір для масових систем AM4/LGA1200.",
     specs: { "Тип": "DDR4", "Ємність": "16GB (2×8)", "Частота": "3200" },
     buy: "#"
@@ -269,7 +270,7 @@ window.PRODUCTS = [
     price: 2599,
     rating: 4.8,
     sku: "DDR4-32-3200",
-    img: "https://picsum.photos/seed/ram2/800/600",
+    img: "https://content2.rozetka.com.ua/goods/images/big/442941455.jpg",
     desc: "Для багатозадачності, стрімінгу, робочих задач.",
     specs: { "Тип": "DDR4", "Ємність": "32GB (2×16)", "Частота": "3200" },
     buy: "#"
@@ -281,7 +282,7 @@ window.PRODUCTS = [
     price: 1999,
     rating: 4.6,
     sku: "DDR5-16-5600",
-    img: "https://picsum.photos/seed/ram3/800/600",
+    img: "https://artline.ua/storage/images/products/24982/gallery/263511/600_gallery_1716978331650361_0.webp",
     desc: "Стартовий комплект під LGA1700/AM5.",
     specs: { "Тип": "DDR5", "Ємність": "16GB (2×8)", "Частота": "5600" },
     buy: "#"
@@ -293,7 +294,7 @@ window.PRODUCTS = [
     price: 3999,
     rating: 4.8,
     sku: "DDR5-32-6000",
-    img: "https://picsum.photos/seed/ram4/800/600",
+    img: "https://content1.rozetka.com.ua/goods/images/big/455928429.jpg",
     desc: "Оптимальний вибір під Ryzen 7000/Intel 13-14 gen.",
     specs: { "Тип": "DDR5", "Ємність": "32GB (2×16)", "Частота": "6000" },
     buy: "#"
@@ -305,7 +306,7 @@ window.PRODUCTS = [
     price: 7999,
     rating: 4.9,
     sku: "DDR5-64-6000",
-    img: "https://picsum.photos/seed/ram5/800/600",
+    img: "https://artline.ua/storage/images/products/24982/gallery/263511/600_gallery_1716978331650361_0.webp",
     desc: "Під роботу з великими проєктами та рендер.",
     specs: { "Тип": "DDR5", "Ємність": "64GB (2×32)", "Частота": "6000" },
     buy: "#"
@@ -317,7 +318,7 @@ window.PRODUCTS = [
     price: 2899,
     rating: 4.7,
     sku: "DDR4-32-3600",
-    img: "https://picsum.photos/seed/ram6/800/600",
+    img: "https://content2.rozetka.com.ua/goods/images/big/442941455.jpg",
     desc: "Трошки швидше за 3200 — для Ryzen 5000 саме те.",
     specs: { "Тип": "DDR4", "Ємність": "32GB (2×16)", "Частота": "3600" },
     buy: "#"
@@ -329,7 +330,7 @@ window.PRODUCTS = [
     price: 5899,
     rating: 4.6,
     sku: "DDR5-48-6000",
-    img: "https://picsum.photos/seed/ram7/800/600",
+    img: "https://artline.ua/storage/images/products/24982/gallery/263511/600_gallery_1716978331650361_0.webp",
     desc: "Нестандартний об’єм для творчих задач.",
     specs: { "Тип": "DDR5", "Ємність": "48GB (2×24)", "Частота": "6000" },
     buy: "#"
@@ -341,7 +342,7 @@ window.PRODUCTS = [
     price: 4499,
     rating: 4.6,
     sku: "DDR5-32-6400",
-    img: "https://picsum.photos/seed/ram8/800/600",
+    img: "https://artline.ua/storage/images/products/24982/gallery/263511/600_gallery_1716978331650361_0.webp",
     desc: "Оверклокерський комплект для Intel.",
     specs: { "Тип": "DDR5", "Ємність": "32GB (2×16)", "Частота": "6400" },
     buy: "#"
@@ -353,7 +354,7 @@ window.PRODUCTS = [
     price: 4299,
     rating: 4.7,
     sku: "DDR5-32-6000-RGB",
-    img: "https://picsum.photos/seed/ram9/800/600",
+    img: "https://artline.ua/storage/images/products/24982/gallery/263511/600_gallery_1716978331650361_0.webp",
     desc: "З підсвіткою • XMP/EXPO профілі.",
     specs: { "Тип": "DDR5", "Ємність": "32GB", "Частота": "6000" },
     buy: "#"
@@ -365,7 +366,7 @@ window.PRODUCTS = [
     price: 1299,
     rating: 4.5,
     sku: "DDR4-16-3000",
-    img: "https://picsum.photos/seed/ram10/800/600",
+    img: "https://content2.rozetka.com.ua/goods/images/big/442941455.jpg",
     desc: "Економ-набір для офісу/лайт-геймінгу.",
     specs: { "Тип": "DDR4", "Ємність": "16GB", "Частота": "3000" },
     buy: "#"
@@ -381,7 +382,7 @@ window.PRODUCTS = [
     price: 4699,
     rating: 4.7,
     sku: "B550-TOMAHAWK",
-    img: "https://picsum.photos/seed/mb1/800/600",
+    img: "https://storage-asset.msi.com/global/picture/image/feature/mb/B550/MAG/TOMAHAWK/msi-mag-b550-tomahawk-hero-board03.png",
     desc: "Класика під Ryzen 3000/5000 • добрий VRM.",
     specs: { "Сокет": "AM4", "Форм-фактор": "ATX", "M.2": "2×", "LAN": "2.5G" },
     buy: "#"
@@ -393,7 +394,7 @@ window.PRODUCTS = [
     price: 2699,
     rating: 4.4,
     sku: "PRIME-B450M-A-II",
-    img: "https://picsum.photos/seed/mb2/800/600",
+    img: "https://dlcdnimgs.asus.com/websites/global/products/afwaj0qnsbp72phf/intro-main.png",
     desc: "Бюджет під AM4, офіс/база під апгрейд.",
     specs: { "Сокет": "AM4", "Форм-фактор": "mATX", "M.2": "1×" },
     buy: "#"
@@ -405,7 +406,7 @@ window.PRODUCTS = [
     price: 6499,
     rating: 4.6,
     sku: "B650-AORUS-ELITE",
-    img: "https://picsum.photos/seed/mb3/800/600",
+    img: "https://hotline.ua/img/tx/400/4002489605.jpg",
     desc: "Під Ryzen 7000, PCIe 5.0 для SSD.",
     specs: { "Сокет": "AM5", "Форм-фактор": "ATX", "M.2": "3×", "LAN": "2.5G" },
     buy: "#"
@@ -417,7 +418,7 @@ window.PRODUCTS = [
     price: 9999,
     rating: 4.7,
     sku: "TUF-X670-PLUS-WIFI",
-    img: "https://picsum.photos/seed/mb4/800/600",
+    img: "https://dlcdnwebimgs.asus.com/gain/ad8d8b21-88f6-47ea-873b-403ad6e70f16/w800",
     desc: "Потужний VRM, багато портів, Wi-Fi 6.",
     specs: { "Сокет": "AM5", "Форм-фактор": "ATX", "M.2": "4×", "Wi-Fi": "6" },
     buy: "#"
@@ -429,7 +430,7 @@ window.PRODUCTS = [
     price: 7999,
     rating: 4.6,
     sku: "PRO-Z690-A-DDR4",
-    img: "https://picsum.photos/seed/mb5/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXTRHBcrImZpndSqV9FEwc10476h57VulV7A&s",
     desc: "Під 12-13 gen, чимало M.2 і портів.",
     specs: { "Сокет": "LGA1700", "Форм-фактор": "ATX", "M.2": "4×" },
     buy: "#"
@@ -441,7 +442,7 @@ window.PRODUCTS = [
     price: 10999,
     rating: 4.7,
     sku: "PRIME-Z790-P-WIFI",
-    img: "https://picsum.photos/seed/mb6/800/600",
+    img: "https://dlcdnwebimgs.asus.com/gain/37bbb2b4-b916-4170-9644-ff2aa0e0a253/",
     desc: "Оновлена платформа для 13-14 gen.",
     specs: { "Сокет": "LGA1700", "Форм-фактор": "ATX", "M.2": "4×", "Wi-Fi": "6" },
     buy: "#"
@@ -453,7 +454,7 @@ window.PRODUCTS = [
     price: 5499,
     rating: 4.6,
     sku: "B760M-DS3H-AX",
-    img: "https://picsum.photos/seed/mb7/800/600",
+    img: "https://artline.ua/storage/images/products/22900/gallery/246717/1400_gallery_1711540715399927_0.webp",
     desc: "B760 під 12-14 gen • Wi-Fi 6, 2.5G LAN.",
     specs: { "Сокет": "LGA1700", "Форм-фактор": "mATX", "Wi-Fi": "6" },
     buy: "#"
@@ -465,7 +466,7 @@ window.PRODUCTS = [
     price: 2199,
     rating: 4.3,
     sku: "H610M-HDV-M2",
-    img: "https://picsum.photos/seed/mb8/800/600",
+    img: "https://img.telemart.ua/445944-588610-product_popup/asrock-h610m-hdvm2-r20-s1700-intel-h610.jpg",
     desc: "Мінімум необхідного для i3/i5 без розгону.",
     specs: { "Сокет": "LGA1700", "Форм-фактор": "mATX", "M.2": "1×" },
     buy: "#"
@@ -477,7 +478,7 @@ window.PRODUCTS = [
     price: 4999,
     rating: 4.6,
     sku: "B660M-MORTAR-WIFI",
-    img: "https://picsum.photos/seed/mb9/800/600",
+    img: "https://asset.msi.com/resize/image/global/product/product_1641288062e575c9ef9586ed7f1709a1831a882723.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png",
     desc: "Середній клас для 12-13 gen з Wi-Fi.",
     specs: { "Сокет": "LGA1700", "Форм-фактор": "mATX", "Wi-Fi": "6" },
     buy: "#"
@@ -489,7 +490,7 @@ window.PRODUCTS = [
     price: 1899,
     rating: 4.2,
     sku: "A520M-S2H",
-    img: "https://picsum.photos/seed/mb10/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUsGe616uWpZG12Ujym4pskfjuMt8edpmCrA&s",
     desc: "Найдоступніша плата під Ryzen без розгону.",
     specs: { "Сокет": "AM4", "Форм-фактор": "mATX", "M.2": "1×" },
     buy: "#"
@@ -505,7 +506,7 @@ window.PRODUCTS = [
     price: 999,
     rating: 4.7,
     sku: "NVME-500-PCIe3",
-    img: "https://picsum.photos/seed/ssd1/800/600",
+    img: "https://i.allo.ua/media/catalog/product/cache/1/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/s/a/samsung_980_500gb_m.2_pcie_3.0_x4_v-nand_3bit_mlc_mz-v8v500bw_1_.webp",
     desc: "До 2500/2000 MB/s • для швидкого старту.",
     specs: { "Інтерфейс": "PCIe 3.0 x4", "Форм-фактор": "M.2 2280" },
     buy: "#"
@@ -517,7 +518,7 @@ window.PRODUCTS = [
     price: 1799,
     rating: 4.8,
     sku: "NVME-1TB-PCIe3",
-    img: "https://picsum.photos/seed/ssd2/800/600",
+    img: "https://i.allo.ua/media/catalog/product/cache/1/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/s/a/samsung_980_1tb_m.2_pcie_3.0_x4_v-nand_3bit_mlc_mz-v8v1t0bw_2_.webp",
     desc: "Швидко й недорого для ігор/роботи.",
     specs: { "Інтерфейс": "PCIe 3.0 x4", "Форм-фактор": "M.2 2280" },
     buy: "#"
@@ -529,7 +530,7 @@ window.PRODUCTS = [
     price: 2399,
     rating: 4.8,
     sku: "NVME-1TB-Gen4",
-    img: "https://picsum.photos/seed/ssd3/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0c3TYAL7xzkeM-rFNbxxv63xW5x9-TgZW1A&s",
     desc: "До 5000/4500 MB/s • краще для сучасних ігор.",
     specs: { "Інтерфейс": "PCIe 4.0 x4", "Форм-фактор": "M.2 2280" },
     buy: "#"
@@ -541,7 +542,7 @@ window.PRODUCTS = [
     price: 4399,
     rating: 4.8,
     sku: "NVME-2TB-Gen4",
-    img: "https://picsum.photos/seed/ssd4/800/600",
+    img: "https://a.allegroimg.com/s1080/2582e5/e726ddbc421995bb9add27661a44/Dysk-SSD-Silicon-Power-UD85-2TB-M-2-PCIe-NVMe-Gen4-Wysokosc-4-mm",
     desc: "Для великих бібліотек ігор та монтажу.",
     specs: { "Інтерфейс": "PCIe 4.0 x4", "Форм-фактор": "M.2 2280" },
     buy: "#"
@@ -553,7 +554,7 @@ window.PRODUCTS = [
     price: 799,
     rating: 4.6,
     sku: "SATA-SSD-480",
-    img: "https://picsum.photos/seed/ssd5/800/600",
+    img: "https://img.telemart.ua/67022-425931-product_popup/kingston-ssdnow-a400-tlc-480gb-25-sa400s37480g.jpg",
     desc: "Бюджетне прискорення старих ПК/ноутбуків.",
     specs: { "Інтерфейс": "SATA III", "Форм-фактор": "2.5\"" },
     buy: "#"
@@ -565,7 +566,7 @@ window.PRODUCTS = [
     price: 1499,
     rating: 4.4,
     sku: "HDD-1TB-7200",
-    img: "https://picsum.photos/seed/ssd6/800/600",
+    img: "https://content.secur.ua/goods/images/big/ld0003830315_2.webp",
     desc: "Архів/медіатека, оптимально за ціною.",
     specs: { "Інтерфейс": "SATA III", "Форм-фактор": "3.5\"" },
     buy: "#"
@@ -577,7 +578,7 @@ window.PRODUCTS = [
     price: 2099,
     rating: 4.5,
     sku: "HDD-2TB-7200",
-    img: "https://picsum.photos/seed/ssd7/800/600",
+    img: "https://img.telemart.ua/89152-407359-product_popup/seagate-barracuda-2tb-256mb-7200rpm-35-st2000dm008.jpg",
     desc: "Більше місця для відео та ігор.",
     specs: { "Інтерфейс": "SATA III", "Форм-фактор": "3.5\"" },
     buy: "#"
@@ -589,7 +590,7 @@ window.PRODUCTS = [
     price: 2799,
     rating: 4.7,
     sku: "NVME-2230-1TB",
-    img: "https://picsum.photos/seed/ssd8/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxPPCPc-d-3ARjBYyIr9iDDCVgfVcz_fRpxQ&s",
     desc: "Компактний форм-фактор для портативок.",
     specs: { "Інтерфейс": "PCIe 4.0 x4", "Форм-фактор": "M.2 2230" },
     buy: "#"
@@ -601,7 +602,7 @@ window.PRODUCTS = [
     price: 3499,
     rating: 4.7,
     sku: "EXT-SSD-1TB",
-    img: "https://picsum.photos/seed/ssd9/800/600",
+    img: "https://apple-mania.com.ua/media/catalog/product/cache/e026f651b05122a6916299262b60c47d/7/8/789448_3_.webp",
     desc: "Швидкий переносний накопичувач для робочих файлів.",
     specs: { "Інтерфейс": "USB-C 10Gbps", "Форм-фактор": "Портативний" },
     buy: "#"
@@ -613,7 +614,7 @@ window.PRODUCTS = [
     price: 3299,
     rating: 4.7,
     sku: "NVME-2TB-PCIe3",
-    img: "https://picsum.photos/seed/ssd10/800/600",
+    img: "https://hard.kiev.ua/wa-data/public/shop/products/70/29/2970/images/4657/4657.970.jpg",
     desc: "Компроміс швидкості/ціни для великого об’єму.",
     specs: { "Інтерфейс": "PCIe 3.0 x4", "Форм-фактор": "M.2 2280" },
     buy: "#"
@@ -629,7 +630,7 @@ window.PRODUCTS = [
     price: 2799,
     rating: 4.6,
     sku: "MESH-ATX-3FAN",
-    img: "https://picsum.photos/seed/case1/800/600",
+    img: "https://img0.domopolis.ua/img.dp/acb/acb19fa97f96096d302c84a9511fd37ex700x700x80.jpg",
     desc: "Добра продувність, ARGB вентилятори в комплекті.",
     specs: { "Форм-фактор": "ATX", "Вентилятори": "3×120мм" },
     buy: "#"
@@ -641,7 +642,7 @@ window.PRODUCTS = [
     price: 1999,
     rating: 4.3,
     sku: "MATX-BASIC",
-    img: "https://picsum.photos/seed/case2/800/600",
+    img: "https://content2.rozetka.com.ua/files/images/original/462835308.png",
     desc: "Компактний корпус під офіс/бюджетні збірки.",
     specs: { "Форм-фактор": "mATX", "Довжина GPU": "до 320 мм" },
     buy: "#"
@@ -653,7 +654,7 @@ window.PRODUCTS = [
     price: 3499,
     rating: 4.5,
     sku: "ATX-GLASS-ARGB",
-    img: "https://picsum.photos/seed/case3/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDOdMUbibo2dsEmqRCAFgiW1j44eDT-Jd4LQ&s",
     desc: "Загартоване скло, пилові фільтри.",
     specs: { "Форм-фактор": "ATX", "Вентилятори": "4×120мм" },
     buy: "#"
@@ -665,7 +666,7 @@ window.PRODUCTS = [
     price: 3199,
     rating: 4.6,
     sku: "ATX-WHITE-AIR",
-    img: "https://picsum.photos/seed/case4/800/600",
+    img: "https://vseplus.com/images/p/full/370775a.jpg",
     desc: "Світлий мінімалізм з сіткою попереду.",
     specs: { "Форм-фактор": "ATX", "Довжина GPU": "до 380 мм" },
     buy: "#"
@@ -677,7 +678,7 @@ window.PRODUCTS = [
     price: 3999,
     rating: 4.7,
     sku: "FRACTAL-MESHIFY-C",
-    img: "https://picsum.photos/seed/case5/800/600",
+    img: "https://hotline.ua/img/tx/164/1642875565.jpg",
     desc: "Іконічний дизайн, чудова вентиляція.",
     specs: { "Форм-фактор": "ATX", "Фільтри": "Повний комплект" },
     buy: "#"
@@ -689,7 +690,7 @@ window.PRODUCTS = [
     price: 4699,
     rating: 4.6,
     sku: "NZXT-H5-FLOW",
-    img: "https://picsum.photos/seed/case6/800/600",
+    img: "https://img.telemart.ua/446879-589480-product_popup/nzxt-h5-flow-tempered-glass-bez-bp-cc-h51fw-01-white.jpg",
     desc: "Охайний дизайн, гарна ергономіка для складання.",
     specs: { "Форм-фактор": "ATX", "Фронт": "Mesh" },
     buy: "#"
@@ -701,7 +702,7 @@ window.PRODUCTS = [
     price: 2399,
     rating: 4.4,
     sku: "MATREXX-55-MESH",
-    img: "https://picsum.photos/seed/case7/800/600",
+    img: "https://img.telemart.ua/260849-964432-product_popup/deepcool-matrexx-55-mesh-add-rgb-4f-tempered-glass-bez-bp-black.jpg",
     desc: "Доступний корпус з добрим потоком.",
     specs: { "Форм-фактор": "ATX" },
     buy: "#"
@@ -713,7 +714,7 @@ window.PRODUCTS = [
     price: 4999,
     rating: 4.8,
     sku: "NR200P",
-    img: "https://picsum.photos/seed/case8/800/600",
+    img: "https://content2.rozetka.com.ua/goods/images/big/148183434.jpg",
     desc: "Компакний SFF з прозорою панеллю.",
     specs: { "Форм-фактор": "Mini-ITX", "GPU": "до 330 мм" },
     buy: "#"
@@ -725,7 +726,7 @@ window.PRODUCTS = [
     price: 2899,
     rating: 4.6,
     sku: "P300A",
-    img: "https://picsum.photos/seed/case9/800/600",
+    img: "https://m.media-amazon.com/images/I/91Gqz3yTwnL._AC_UF1000,1000_QL80_.jpg",
     desc: "Чистий дизайн + відмінний повітряний потік.",
     specs: { "Форм-фактор": "ATX" },
     buy: "#"
@@ -737,7 +738,7 @@ window.PRODUCTS = [
     price: 5499,
     rating: 4.7,
     sku: "LANCOOL-216",
-    img: "https://picsum.photos/seed/case10/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTD8bIC6lMBqHo5ptW4e5NvKf-tYs8pm0Li9g&s",
     desc: "Дві 160мм турбіни попереду, чудовий Airflow.",
     specs: { "Форм-фактор": "ATX", "Вентилятори": "2×160мм + 1×140мм" },
     buy: "#"
@@ -753,7 +754,7 @@ window.PRODUCTS = [
     price: 1799,
     rating: 4.5,
     sku: "PSU-550-BR",
-    img: "https://picsum.photos/seed/psu1/800/600",
+    img: "https://m.media-amazon.com/images/I/71yk7kdfkgL.jpg",
     desc: "Бюджет під збірки без топ-GPU.",
     specs: { "Сертифікація": "80+ Bronze", "Кабелі": "Немодульні" },
     buy: "#"
@@ -765,7 +766,7 @@ window.PRODUCTS = [
     price: 3199,
     rating: 4.7,
     sku: "PSU-650-GOLD",
-    img: "https://picsum.photos/seed/psu2/800/600",
+    img: "https://artline.ua/storage/images/products/41423/gallery/411884/600_gallery_1747909447172725_0.webp",
     desc: "Золотий стандарт під RTX 4060/4070.",
     specs: { "Сертифікація": "80+ Gold", "Кабелі": "Частково модульні" },
     buy: "#"
@@ -777,7 +778,7 @@ window.PRODUCTS = [
     price: 3999,
     rating: 4.8,
     sku: "PSU-750-GOLD",
-    img: "https://picsum.photos/seed/psu3/800/600",
+    img: "https://www.segotep.us/cdn/shop/files/1250w-1600x1600-2_01_352x.jpg?v=1730941615",
     desc: "Для потужніших GPU та апгрейду.",
     specs: { "Сертифікація": "80+ Gold", "Кабелі": "Модульні" },
     buy: "#"
@@ -789,7 +790,7 @@ window.PRODUCTS = [
     price: 4999,
     rating: 4.8,
     sku: "PSU-850-GOLD",
-    img: "https://picsum.photos/seed/psu4/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOmgeLXLZ0MlMpe-edbgrAtxuh05R8hHe6YA&s",
     desc: "Запас для RTX 4080/7900XT.",
     specs: { "Сертифікація": "80+ Gold", "Кабелі": "Модульні" },
     buy: "#"
@@ -801,7 +802,7 @@ window.PRODUCTS = [
     price: 6999,
     rating: 4.7,
     sku: "PSU-1000-GOLD",
-    img: "https://picsum.photos/seed/psu5/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-26ycmXd-K3RgGVpistm_0hl1ovWECYJ0g&s",
     desc: "Для топових збірок з великим розгоном.",
     specs: { "Сертифікація": "80+ Gold", "Кабелі": "Модульні" },
     buy: "#"
@@ -813,7 +814,7 @@ window.PRODUCTS = [
     price: 2299,
     rating: 4.4,
     sku: "PSU-650-BR",
-    img: "https://picsum.photos/seed/psu6/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCmxdNUlO3lDYArKRIT5qMGD3iZkVTq6uOBQ&s",
     desc: "Недорогий варіант для мейнстріму.",
     specs: { "Сертифікація": "80+ Bronze" },
     buy: "#"
@@ -825,7 +826,7 @@ window.PRODUCTS = [
     price: 5999,
     rating: 4.8,
     sku: "PSU-750-PL",
-    img: "https://picsum.photos/seed/psu7/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEdqlLPrH-CMO4BmjdZwpB7FcGNYtJAdI4qQ&s",
     desc: "Максимальна ефективність у середньому класі.",
     specs: { "Сертифікація": "80+ Platinum" },
     buy: "#"
@@ -837,7 +838,7 @@ window.PRODUCTS = [
     price: 5299,
     rating: 4.7,
     sku: "PSU-SFX-650-G",
-    img: "https://picsum.photos/seed/psu8/800/600",
+    img: "https://m.media-amazon.com/images/I/71Gm9dGrT2L.jpg",
     desc: "Для Mini-ITX/NR200P, компактний форм-фактор.",
     specs: { "Сертифікація": "80+ Gold", "Форм-фактор": "SFX" },
     buy: "#"
@@ -849,7 +850,7 @@ window.PRODUCTS = [
     price: 1499,
     rating: 4.3,
     sku: "PSU-500-BR",
-    img: "https://picsum.photos/seed/psu9/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcX2wg3ceCE9idQugCAtahsFbF7_HLhNY-Xw&s",
     desc: "Під офіс/домашній ПК без дискретної відеокарти.",
     specs: { "Сертифікація": "80+ Bronze" },
     buy: "#"
@@ -861,7 +862,7 @@ window.PRODUCTS = [
     price: 2899,
     rating: 4.5,
     sku: "PSU-600-G",
-    img: "https://picsum.photos/seed/psu10/800/600",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdXeQd1aPq3ySPH-3YX5t_38ddLxx2e20tGw&s",
     desc: "Енергоефективність і тиша за помірні гроші.",
     specs: { "Сертифікація": "80+ Gold" },
     buy: "#"
@@ -877,7 +878,7 @@ window.PRODUCTS = [
     price: 1299,
     rating: 4.6,
     sku: "AIR-120-4P",
-    img: "https://picsum.photos/seed/cool1/800/600",
+    img: "https://artline.ua/storage/images/products/2968/gallery/44461/1400_products_1668166255332461_0.webp",
     desc: "Оптимум для i5/R5 без розгону.",
     specs: { "Тип": "Баштовий", "Вентилятор": "120мм PWM" },
     buy: "#"
@@ -889,7 +890,7 @@ window.PRODUCTS = [
     price: 999,
     rating: 4.4,
     sku: "LP-COOL-92",
-    img: "https://picsum.photos/seed/cool2/800/600",
+    img: "https://cdn.27.ua/sc--media--prod/default/02/c2/1c/02c21c7e-16f7-462c-8e4b-023ac7b89b95.jpg",
     desc: "Для компактних корпусів/HTPC.",
     specs: { "Тип": "Low Profile", "Вентилятор": "92мм PWM" },
     buy: "#"
@@ -901,7 +902,7 @@ window.PRODUCTS = [
     price: 3699,
     rating: 4.6,
     sku: "AIO-240",
-    img: "https://picsum.photos/seed/cool3/800/600",
+    img: "https://img.telemart.ua/406711-558790-product_popup/ekwb-ek-aio-240-d-rgb-3831109815830.jpg",
     desc: "Баланс температур і шуму.",
     specs: { "Радіатор": "240мм", "Підсвітка": "ARGB" },
     buy: "#"
@@ -913,7 +914,7 @@ window.PRODUCTS = [
     price: 5999,
     rating: 4.7,
     sku: "AIO-360",
-    img: "https://picsum.photos/seed/cool4/800/600",
+    img: "https://img.telemart.ua/406713-558807-product_popup/ekwb-ek-aio-360-d-rgb-3831109815847.jpg",
     desc: "Для потужних CPU з запасом.",
     specs: { "Радіатор": "360мм", "Вентилятори": "3×120мм" },
     buy: "#"
@@ -925,7 +926,7 @@ window.PRODUCTS = [
     price: 299,
     rating: 4.5,
     sku: "FAN-120-PWM",
-    img: "https://picsum.photos/seed/cool5/800/600",
+    img: "https://defis.ua/image/cache/catalog/2/22/22244-xW.jpg",
     desc: "Тихий корпусний вентилятор.",
     specs: { "Розмір": "120×25мм", "Швидкість": "до 1500RPM" },
     buy: "#"
@@ -937,7 +938,7 @@ window.PRODUCTS = [
     price: 399,
     rating: 4.5,
     sku: "FAN-140-PWM",
-    img: "https://picsum.photos/seed/cool6/800/600",
+    img: "https://f.428.ua/img/4210805/3000/2000/ventilyator_dlya_korpusa_140mm_montech_rx140_pwm_white~940~1107.jpg",
     desc: "Для корпусів з великим фронтом.",
     specs: { "Розмір": "140×25мм", "Швидкість": "до 1200RPM" },
     buy: "#"
@@ -949,7 +950,7 @@ window.PRODUCTS = [
     price: 899,
     rating: 4.6,
     sku: "FAN-ARGB-3",
-    img: "https://picsum.photos/seed/cool7/800/600",
+    img: "https://i.moyo.ua/img/products/6842/86_1500.jpg?1761824642",
     desc: "Підсвітка + хаб у комплекті.",
     specs: { "Комплект": "3 вентилятори", "Інтерфейс": "ARGB 5V" },
     buy: "#"
@@ -961,7 +962,7 @@ window.PRODUCTS = [
     price: 1799,
     rating: 4.7,
     sku: "AIR-120-6P",
-    img: "https://picsum.photos/seed/cool8/800/600",
+    img: "https://content.rozetka.com.ua/goods/images/big/589065981.jpg",
     desc: "Для i7/R7 з турбо-навантаженням.",
     specs: { "Тип": "Баштовий", "Трубки": "6" },
     buy: "#"
@@ -973,7 +974,7 @@ window.PRODUCTS = [
     price: 4799,
     rating: 4.6,
     sku: "AIO-280",
-    img: "https://picsum.photos/seed/cool9/800/600",
+    img: "https://img.telemart.ua/406712-558802-product_popup/ekwb-ek-aio-280-d-rgb-3831109829844.jpg",
     desc: "Тихі 140мм вертушки + добра продуктивність.",
     specs: { "Радіатор": "280мм", "Вентилятори": "2×140мм" },
     buy: "#"
@@ -985,7 +986,7 @@ window.PRODUCTS = [
     price: 199,
     rating: 4.8,
     sku: "PASTE-HIGH",
-    img: "https://picsum.photos/seed/cool10/800/600",
+    img: "https://img.joomcdn.net/f62b52b9884006f9180ae4ccfe9e606eec1a37f5_1024_1024.jpeg",
     desc: "Стабільні температури та легке нанесення.",
     specs: { "Тип": "Паста", "Маса": "3–5 г" },
     buy: "#"
