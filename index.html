@@ -133,6 +133,49 @@
       </ul>
     </div>
   </footer>
+<div id="calculator-icon">
+  🧮
+</div>
+
+<div id="calculator-modal" class="hidden">
+  <div class="modal-content">
+    <span id="calc-close">&times;</span>
+
+    <h3 style="text-align:center;">Калькулятор</h3>
+
+    <input type="text" class="display" id="display" readonly>
+
+    <div class="buttons">
+      <button class="clear" id="clear">C</button>
+      <button id="backspace">⌫</button>
+      <button class="operator" data-op="%">%</button>
+
+      <button data-num="7">7</button>
+      <button data-num="8">8</button>
+      <button data-num="9">9</button>
+      <button class="operator" data-op="/">/</button>
+
+      <button data-num="4">4</button>
+      <button data-num="5">5</button>
+      <button data-num="6">6</button>
+      <button class="operator" data-op="*">*</button>
+
+      <button data-num="1">1</button>
+      <button data-num="2">2</button>
+      <button data-num="3">3</button>
+      <button class="operator" data-op="-">-</button>
+
+      <button data-num="0">0</button>
+      <button data-num=".">.</button>
+      <button class="operator" data-op="+">+</button>
+      <button class="operator" id="sqrt">√</button>
+
+      <button class="operator" id="pow">xʸ</button>
+      <button class="equal" id="equal">=</button>
+    </div>
+  </div>
+</div>
+
 <script src="js/app.js"></script>
 </body>
 </html>

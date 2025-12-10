@@ -1,15 +1,32 @@
-
 (function(){
   const $ = (s, r=document)=>r.querySelector(s);
   const $$ = (s, r=document)=>Array.from(r.querySelectorAll(s));
-const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currency:'UAH' }).format(v);
-  const CATNAMES = {cpu:'Процесори', gpu:'Відеокарти', ram:'Оперативна памʼять', mb:'Материнські плати', storage:'Накопичувачі', psu:'Блоки живлення', case:'Корпуси', cooling:'Охолодження'};
+  const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currency:'UAH' }).format(v);
+
+  const CATNAMES = {
+    cpu:'Процесори',
+    gpu:'Відеокарти',
+    ram:'Оперативна памʼять',
+    mb:'Материнські плати',
+    storage:'Накопичувачі',
+    psu:'Блоки живлення',
+    case:'Корпуси',
+    cooling:'Охолодження'
+  };
   const CART_KEY = 'pc_cart';
+
+  // --- ПАГІНАЦІЯ ---
+  const PER_PAGE = 6;      // скільки товарів показувати на сторінці
+  let currentPage = 1;     // поточна сторінка
 
   // ===== CART =====
   function loadCart(){
-    try { return JSON.parse(localStorage.getItem(CART_KEY)) || {items:[], updatedAt: Date.now()}; }
-    catch(e){ return {items:[], updatedAt: Date.now()}; }
+    try { 
+      return JSON.parse(localStorage.getItem(CART_KEY)) || {items:[], updatedAt: Date.now()}; 
+    }
+    catch(e){ 
+      return {items:[], updatedAt: Date.now()}; 
+    }
   }
   function saveCart(state){
     state.updatedAt = Date.now();
@@ -70,15 +87,22 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
   }
 
   // ===== Catalog core =====
-  function getCatName(id){ return CATNAMES[id] || 'Каталог'; }
+  function getCatName(id){ 
+    return CATNAMES[id] || 'Каталог'; 
+  }
 
   function applyFilters(list){
-    const q = ($('#q').value||'').trim().toLowerCase();
-    const sort = $('#sort').value;
+    const q = ($('#q')?.value||'').trim().toLowerCase();
+    const sort = $('#sort')?.value;
     let items = list.slice();
 
-    if(q) items = items.filter(p => p.title.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q) ||
-      Object.values(p.specs||{}).some(v => String(v).toLowerCase().includes(q)));
+    if(q) {
+      items = items.filter(p => 
+        p.title.toLowerCase().includes(q) || 
+        p.desc.toLowerCase().includes(q) ||
+        Object.values(p.specs||{}).some(v => String(v).toLowerCase().includes(q))
+      );
+    }
 
     if (sort === 'price_asc') items.sort((a,b)=>a.price-b.price);
     else if (sort === 'price_desc') items.sort((a,b)=>b.price-a.price);
@@ -90,8 +114,14 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
 
   function renderGrid(list){
     const el = $('#grid');
+    if (!el) return;
+
     el.innerHTML = '';
-    if(!list.length) { el.innerHTML = '<div class="empty">Нічого не знайдено.</div>'; return; }
+    if(!list.length) {
+      el.innerHTML = '<div class="empty">Нічого не знайдено.</div>'; 
+      return; 
+    }
+
     list.forEach(p=>{
       const card = document.createElement('article');
       card.className='card';
@@ -128,6 +158,31 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
     };
   }
 
+  // --- рендер кнопок пагінації ---
+  function renderPagination(totalItems) {
+    const container = $('#pagination');
+    if (!container) return;
+
+    const totalPages = Math.max(1, Math.ceil(totalItems / PER_PAGE));
+
+    if (totalPages <= 1) {
+      container.innerHTML = '';
+      return;
+    }
+
+    let html = '';
+
+    html += `<button class="page-btn" data-page="prev" ${currentPage === 1 ? 'disabled' : ''}>‹</button>`;
+
+    for (let i = 1; i <= totalPages; i++) {
+      html += `<button class="page-btn ${i === currentPage ? 'active' : ''}" data-page="${i}">${i}</button>`;
+    }
+
+    html += `<button class="page-btn" data-page="next" ${currentPage === totalPages ? 'disabled' : ''}>›</button>`;
+
+    container.innerHTML = html;
+  }
+
   function openModal(id){
     const p = (window.PRODUCTS||[]).find(x=>x.id===id);
     if(!p) return;
@@ -138,7 +193,8 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
     $('#m-category').textContent = getCatName(p.category);
     $('#m-price').textContent = new Intl.NumberFormat('uk-UA', { style:'currency', currency:'UAH' }).format(p.price);
     $('#btn-buy').href = p.buy;
-    const specs = $('#m-specs'); specs.innerHTML = '';
+    const specs = $('#m-specs'); 
+    specs.innerHTML = '';
     Object.entries(p.specs||{}).forEach(([k,v])=>{
       const d = document.createElement('div');
       d.innerHTML = `<div class="muted" style="font-size:12px">${k}</div><div style="font-weight:600">${v}</div>`;
@@ -153,9 +209,20 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
     return FIXED ? all.filter(p=>p.category===FIXED) : all;
   }
 
+  // --- ГОЛОВНИЙ РЕНДЕР З УРАХУВАННЯМ ПАГІНАЦІЇ ---
   function render(){
     const list = filterByFixedCategory();
-    renderGrid(applyFilters(list));
+    const filtered = applyFilters(list);
+
+    const totalItems = filtered.length;
+    const totalPages = Math.max(1, Math.ceil(totalItems / PER_PAGE));
+    if (currentPage > totalPages) currentPage = totalPages;
+
+    const start = (currentPage - 1) * PER_PAGE;
+    const pageItems = filtered.slice(start, start + PER_PAGE);
+
+    renderGrid(pageItems);
+    renderPagination(totalItems);
   }
 
   function initCatalog(){
@@ -164,10 +231,46 @@ const fmtPrice = v => new Intl.NumberFormat('uk-UA', { style:'currency', currenc
     $('#title').textContent = title;
     $('#crumb').textContent = title === 'Каталог' ? '' : '· ' + title;
 
-    $('#q').addEventListener('input', render);
-    $('#sort').addEventListener('change', render);
+    $('#q').addEventListener('input', () => {
+      currentPage = 1;   // при новому пошуку переходити на 1 сторінку
+      render();
+    });
+    $('#sort').addEventListener('change', () => {
+      currentPage = 1;
+      render();
+    });
+
     $('#btn-close').addEventListener('click', ()=> $('#modal').close());
-    $('#modal').addEventListener('click', (e)=>{ if(e.target.tagName==='DIALOG') e.target.close(); });
+    $('#modal').addEventListener('click', (e)=>{ 
+      if(e.target.tagName==='DIALOG') e.target.close(); 
+    });
+
+    const pagination = $('#pagination');
+    if (pagination) {
+      pagination.addEventListener('click', (e) => {
+        const btn = e.target.closest('.page-btn');
+        if (!btn) return;
+
+        const page = btn.dataset.page;
+
+        const list = filterByFixedCategory();
+        const filtered = applyFilters(list);
+        const totalItems = filtered.length;
+        const totalPages = Math.max(1, Math.ceil(totalItems / PER_PAGE));
+
+        if (page === 'prev' && currentPage > 1) {
+          currentPage--;
+        } else if (page === 'next' && currentPage < totalPages) {
+          currentPage++;
+        } else {
+          const n = Number(page);
+          if (!Number.isNaN(n)) currentPage = n;
+        }
+
+        render();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
 
     updateCartCount();
     render();
