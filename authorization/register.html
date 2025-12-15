@@ -35,15 +35,6 @@
     </div>
   </main>
 
-  <script>
-    // Приклад простої перевірки (необов’язково)
-    document.querySelector('form')?.addEventListener('submit', e=>{
-      const form = e.currentTarget;
-      if(!form.checkValidity()){
-        e.preventDefault();
-        form.reportValidity();
-      }
-    });
-  </script>
+  <script src="auth.js"></script>
 </body>
 </html>

@@ -192,7 +192,23 @@
     $('#m-desc').textContent = p.desc;
     $('#m-category').textContent = getCatName(p.category);
     $('#m-price').textContent = new Intl.NumberFormat('uk-UA', { style:'currency', currency:'UAH' }).format(p.price);
-    $('#btn-buy').href = p.buy;
+  const buyBtn = $('#btn-buy');
+  buyBtn.onclick = () => {
+  // додати в кошик (використай свою addToCart)
+  buyBtn.onclick = () => {
+  addToCart({
+    id: p.id,
+    title: p.title,
+    price: p.price,
+    img: p.img
+  }, 1);
+
+  window.location.href = '../cart.html';
+};
+
+  // опційно: одразу перейти в кошик
+  window.location.href = '../cart.html';
+};
     const specs = $('#m-specs'); 
     specs.innerHTML = '';
     Object.entries(p.specs||{}).forEach(([k,v])=>{

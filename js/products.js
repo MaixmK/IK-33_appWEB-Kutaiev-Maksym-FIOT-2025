@@ -34,7 +34,7 @@ window.PRODUCTS = [
     price: 7999,
     rating: 4.7,
     sku: "100-100000926WOF",
-    img: "../assets/cpu/AMD Ryzen 7 5700X.webp",
+    img: "../assets/cpu/AMD Ryzen 7 5getProducts700X.webp",
     desc: "8C/16T, 3.4–4.6 ГГц • універсальний восьмиядерник.",
     specs: { "Сокет": "AM4", "TDP": "65W", "Кеш L3": "32MB" },
     buy: "#"

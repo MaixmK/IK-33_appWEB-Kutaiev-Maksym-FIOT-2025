@@ -55,7 +55,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById("calculator-modal");
   const icon = document.getElementById("calculator-icon");
   const closeBtn = document.getElementById("calc-close");
+  if (!modal || !icon || !closeBtn) return;
 
+  
   icon.addEventListener("click", () => {
     modal.classList.remove("hidden");
   });
@@ -72,6 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // === ЛОГІКА КАЛЬКУЛЯТОРА ===  
   const display = document.getElementById("display");
+  if (!display) return;
 
   let firstOperand = null;
   let operator = null;

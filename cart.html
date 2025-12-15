@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Кошик — Комплектуючі</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="topbar container">
+    <a class="logo" href="index.html">Комплектуючі</a>
+
+    <div class="actions">
+      <a class="icon-btn" href="index.html" title="На головну">🏠</a>
+      <a class="icon-btn" href="authorization/login.html" title="Профіль">👤</a>
+      <a class="icon-btn" href="cart.html" title="Кошик">🛒</a><span id="cartCount">0</span>
+    </div>
+  </div>
+</header>
+
+<main class="container cart-page">
+  <h1 class="cart-title">Кошик</h1>
+
+  <div class="cart-grid">
+    <section class="cart-card">
+      <div class="cart-head">
+        <h2 class="cart-subtitle">Товари</h2>
+        <button class="btn" id="btnClearCart" type="button">Очистити</button>
+      </div>
+
+      <div id="cartEmpty" class="cart-empty" hidden>
+        Кошик порожній. Перейдіть у <a href="index.html#shop">каталог</a> і додайте товари.
+      </div>
+
+      <div class="cart-table-wrap">
+        <table class="cart-table" id="cartTable">
+          <thead>
+            <tr>
+              <th>Товар</th>
+              <th class="right">Ціна</th>
+              <th class="center">К-сть</th>
+              <th class="right">Сума</th>
+              <th class="center">Дія</th>
+            </tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <aside class="cart-card">
+      <h2 class="cart-subtitle">Підсумок</h2>
+      <div class="cart-summary">
+        <div class="row"><span class="muted">Позицій:</span><span id="sumItems">0</span></div>
+        <div class="row"><span class="muted">Товарів (шт):</span><span id="sumQty">0</span></div>
+        <div class="row total"><span>Разом:</span><span id="sumTotal">0 ₴</span></div>
+        <button class="btn btn--primary" id="btnCheckout" type="button" disabled>Оформити</button>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer__grid container">
+    <small>© <span id="year"></span> Комплектуючі</small>
+    <ul class="footer__links">
+      <li><a href="about.html">Про проєкт</a></li>
+    </ul>
+  </div>getProducts
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
